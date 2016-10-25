@@ -1,0 +1,12 @@
+/auto-save-list
+/backups
+*.elc
+.svn
+*~
+*.log
+/elpa
+*.swp
+*~
+.\#*
+recentf
+ido.last
