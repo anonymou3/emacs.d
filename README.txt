@@ -1,4 +1,4 @@
-Based https://github.com/redguardtoo/emacs.d.git
+Based on https://github.com/redguardtoo/emacs.d.git
 
 简单的emacs个人配置
 
