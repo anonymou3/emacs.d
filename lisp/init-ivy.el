@@ -1,4 +1,5 @@
 ;; {{ recentf-mode
+(recentf-mode 1)
 (setq recentf-keep '(file-remote-p file-readable-p))
 (setq recentf-max-saved-items 2048
       recentf-exclude '("/tmp/"

@@ -104,5 +104,6 @@ ARCHIVE is the string name of the package archive.")
 (require-package 'better-defaults)
 (require-package 'material-theme)
 (require-package 'flx-ido)
+(require-package 'ivy)
 
 (provide 'init-elpa)
