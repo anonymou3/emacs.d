@@ -70,6 +70,16 @@
     (comment-dwim arg)))
 (global-set-key "\M-;" 'qiang-comment-dwim-line)
 
+;; font size adjust
+;; Press C when scroll mouse middle button
+;; For Linux
+(global-set-key (kbd "<C-mouse-4>") 'text-scale-increase)
+(global-set-key (kbd "<C-mouse-5>") 'text-scale-decrease) 
+;; For Windows
+(global-set-key (kbd "<C-wheel-up>") 'text-scale-increase)
+(global-set-key (kbd "<C-wheel-down>") 'text-scale-decrease)
+
+
 ;;window operate
 ;;http://emacslife.com/read-lisp-tweak-emacs/beginner-3-make-things-more-convenient.html
 ;;ref https://www.reddit.com/r/emacs/comments/3ytb6n/a_better_way_to_define_a_new_prefix/
