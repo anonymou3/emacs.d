@@ -1,7 +1,8 @@
 ;; Fix error: "X windows are not in use or not initialized"
 ;; Ref https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=4000
+;; Ref https://sourceforge.net/p/cedet/mailman/message/31393590/
 
-(if (not (x-display-color-p)) ; if-part
+(if (not (window-system)); x-display-color-p)) ; if-part
     (progn
       (set-face-attribute 'default nil :family "Consolas")
       (set-face-attribute 'default nil :height 135)
