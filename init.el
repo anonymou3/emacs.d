@@ -31,7 +31,7 @@
 
 ;; if windows then set work default-directory
 (when *win64*
-    (setq default-directory "D:/") nil nil)
+    (setq default-directory "C:/Download/") nil nil)
 
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
