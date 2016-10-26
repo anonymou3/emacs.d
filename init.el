@@ -62,6 +62,7 @@
 
   ;;init plugins is not in package manager
   (require 'init-window-numbering)
+  (require 'init-font-set)
 
 ;;custom conf
   (setq custom (concat user-emacs-directory ".custom.el"))

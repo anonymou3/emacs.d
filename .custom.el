@@ -2,8 +2,9 @@
 
 ;;font setting
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(set-face-attribute 'default nil :family "Consolas")
-(set-face-attribute 'default nil :height 135)
+;; move to site-lisp/font-set module
+;; (set-face-attribute 'default nil :family "Consolas")
+;; (set-face-attribute 'default nil :height 135)
 
 ;;default code utf-8
 ;;http://stackoverflow.com/questions/2901541/which-coding-system-should-i-use-in-emacs?noredirect=1&lq=1
