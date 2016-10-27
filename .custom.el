@@ -40,7 +40,7 @@
 (setq default-fill-column 60)
 
 ;;emcas title
-(setq frame-title-format "%b - Emacs")
+(setq frame-title-format "%f - Emacs")
 
 ;;no backup files
 (setq make-backup-files nil)
