@@ -36,6 +36,74 @@
            (line-beginning-position 2)))))
 
 
+;;https://www.emacswiki.org/emacs/CopyWithoutSelection#toc2
+(defun get-point (symbol &optional arg)
+  "get the point"
+  (funcall symbol arg)
+  (point)
+  )
+
+(defun copy-thing (begin-of-thing end-of-thing &optional arg)
+  "copy thing between beg & end into kill ring"
+  (save-excursion
+    (let ((beg (get-point begin-of-thing 1))
+          (end (get-point end-of-thing arg)))
+      (copy-region-as-kill beg end)))
+  )
+
+(defun paste-to-mark(&optional arg)
+  "Paste things to mark, or to the prompt in shell-mode"
+  (let ((pasteMe 
+     	 (lambda()
+     	   (if (string= "shell-mode" major-mode)
+               (progn (comint-next-prompt 25535) (yank))
+             (progn (goto-char (mark)) (yank) )))))
+    (if arg
+        (if (= arg 1)
+     		nil
+          (funcall pasteMe))
+      (funcall pasteMe))
+    ))
+
+;; C-x c
+(defun copy-word (&optional arg)
+  "Copy words at point into kill-ring"
+  (interactive "P")
+  (copy-thing 'backward-word 'forward-word arg)
+  ;;(paste-to-mark arg)
+  )
+(global-set-key (kbd "C-x c") (quote copy-word))
+
+
+;; https://www.emacswiki.org/emacs/MarkCommands#toc6
+;; Mark current word
+;; C-x m
+(defun my-mark-current-word (&optional arg allow-extend)
+  "Put point at beginning of current word, set mark at end."
+  (interactive "p\np")
+  (setq arg (if arg arg 1))
+  (if (and allow-extend
+           (or (and (eq last-command this-command) (mark t))
+               (region-active-p)))
+      (set-mark
+       (save-excursion
+         (when (< (mark) (point))
+           (setq arg (- arg)))
+         (goto-char (mark))
+         (forward-word arg)
+         (point)))
+    (let ((wbounds (bounds-of-thing-at-point 'word)))
+      (unless (consp wbounds)
+        (error "No word at point"))
+      (if (>= arg 0)
+          (goto-char (car wbounds))
+        (goto-char (cdr wbounds)))
+      (push-mark (save-excursion
+                   (forward-word arg)
+                   (point)))
+      (activate-mark))))
+(global-set-key (kbd "C-x m") (quote my-mark-current-word))
+
 ;; F11 toggle set windows transparent effect, test work for windows7
 (global-set-key [(f11)] 'loop-alpha)
 (setq alpha-list '((100 100) (95 65) (85 55) (75 45) (65 35)))
