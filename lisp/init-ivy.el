@@ -1,5 +1,4 @@
-;; {{ recentf-mode
-(recentf-mode 1)
+(ivy-mode 1)
 (setq recentf-keep '(file-remote-p file-readable-p))
 (setq recentf-max-saved-items 2048
       recentf-exclude '("/tmp/"
@@ -23,7 +22,6 @@
                         ;; ~/.emacs.d/**/*.el included
                         ;; "/home/[a-z]\+/\\.[a-df-z]" ; configuration file should not be excluded
                         ))
-;; }}
 
 (defun counsel-recentf-goto ()
   "Recent files."
