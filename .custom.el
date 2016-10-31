@@ -111,3 +111,10 @@
 
 ;;add final line
 (setq require-final-newline t)
+
+;; enable multiple shell buffer
+;; M-x shell/eshell
+(defun wcy-shell-mode-auto-rename-buffer (text)  
+  (if (eq major-mode 'shell-mode)  
+      (rename-buffer  (concat "shell:" default-directory) t)))  
+(add-hook 'comint-output-filter-functions'wcy-shell-mode-auto-rename-buffer)  
