@@ -103,6 +103,12 @@
 (show-paren-mode t)
 (setq show-paren-style 'parentheses)
 
+;; http://forum.ubuntu.org.cn/viewtopic.php?p=2910953
+;; auto pair mode
+(electric-pair-mode t)
+(electric-indent-mode t)
+(electric-layout-mode t)
+
 ;;show pic
 (setq auto-image-file-mode t)
 
