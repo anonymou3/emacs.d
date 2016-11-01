@@ -59,6 +59,7 @@
   (require 'init-ido)
   (require 'init-ivy)
   (require 'init-theme)
+  (require 'init-auto-complete)
 
   ;;init plugins is not in package manager
   (require 'init-window-numbering)
