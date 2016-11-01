@@ -106,5 +106,6 @@ ARCHIVE is the string name of the package archive.")
 (require-package 'flx-ido)
 (require-package 'ivy)
 (require-package 'auto-complete)
+(require-package 'yasnippet)
 
 (provide 'init-elpa)
