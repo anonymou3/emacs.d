@@ -42,7 +42,15 @@
                                   (split-string (shell-command-to-string "fasd -ld") "\n" t))))))
     (ivy-read "directories:" collection :action 'dired)))
 
+(defun clear-recentf-and-directory-list()
+  (interactive)
+  (setq recentf-list '())
+  (message "clear-recentf-and-directory-list")
+)
+
 (global-set-key [(control x)(control r)] 'counsel-recentf-goto)
 (global-set-key [(control x)(control d)] 'counsel-goto-recent-directory)
+;; C-x C-w(ipe)
+(global-set-key [(control x)(control w)] 'clear-recentf-and-directory-list)
 
 (provide 'init-ivy)
