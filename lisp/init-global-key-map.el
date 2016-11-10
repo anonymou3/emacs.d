@@ -147,6 +147,8 @@
 (global-set-key (kbd "<C-wheel-up>") 'text-scale-increase)
 (global-set-key (kbd "<C-wheel-down>") 'text-scale-decrease)
 
+;; switch buffers
+(global-set-key [C-tab] (quote previous-buffer))
 
 ;;window operate
 ;;http://emacslife.com/read-lisp-tweak-emacs/beginner-3-make-things-more-convenient.html

@@ -53,6 +53,8 @@
         (insert key)
         (yas-expand)))))
 
-(define-key yas-minor-mode-map (kbd "<C-tab>")     'yas-ido-expand)
+;; C-x C-TAB
+(define-key yas-minor-mode-map [24 C-tab] (quote yas-ido-expand))
+
 
 (provide 'init-yasnippet)
