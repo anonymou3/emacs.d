@@ -50,7 +50,7 @@
 
 (global-set-key [(control x)(control r)] 'counsel-recentf-goto)
 (global-set-key [(control x)(control d)] 'counsel-goto-recent-directory)
-;; C-x C-w(ipe)
-(global-set-key [(control x)(control w)] 'clear-recentf-and-directory-list)
+;; C-x w(ipe)
+(global-set-key (kbd "C-x w") 'clear-recentf-and-directory-list)
 
 (provide 'init-ivy)
