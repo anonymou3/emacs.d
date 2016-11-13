@@ -106,7 +106,10 @@
 
 ;; F11 toggle set windows transparent effect, test work for windows7
 (global-set-key [(f11)] 'loop-alpha)
-(setq alpha-list '((100 100) (95 65) (85 55) (75 45) (65 35)))
+;; https://www.emacswiki.org/emacs/TransparentEmacs
+;; (set-frame-parameter (selected-frame) 'alpha '(<active> . <inactive>))
+;; (set-frame-parameter (selected-frame) 'alpha <both>)
+(setq alpha-list '((100 80) (80 60) (60 40) (40 20) (20 10)))
 (defun loop-alpha ()
   (interactive)
   (let ((h (car alpha-list)))                ;; head value will set to
