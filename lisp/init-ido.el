@@ -87,4 +87,10 @@ Symbols matching the text at point are put first in the completion list."
       (push-mark (point))
       (goto-char position))))
 
+;; http://stackoverflow.com/questions/5138110/emacs-create-new-file-with-ido-enabled
+;; C-x C-f C-f
+;; It should kick you out of ido mode into "normal" find file mode
+;; or
+;; As mentioned: being fast, using C-j to confirm immediately, and using and additional C-f to temporarily switch to the traditional mode are all useful.
+
 (provide 'init-ido)
