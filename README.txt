@@ -12,7 +12,8 @@ Directory structural hierarchy
             lisp------                      Elpa package init-file, named: init_module_name.el
                       |---init-elpa.el      Load elpa package official plugins
                       |---init-exec-path.el Execute path setting
-                      |---init-ivy.el       C-x C-r open recent files list, C-x C-d open recent directories list,
+                      |---init-ivy.el       C-x C-r open recent files list
+                                            C-x C-d open recent directories list
                                             C-x w clear recent files and directories list
 
                       |---init-global-key-map.el
@@ -22,11 +23,13 @@ Directory structural hierarchy
                                             ;; M-w copy current line without need to select line
                                             ;; C-x c copy words at point into kill-ring
                                             ;; C-x m Mark current word
-                                            ;; F11 toggle set windows transparent effect, test work for windows7
+                                            ;; F11 toggle set windows transparent effect, test in win7
                                             ;; C-z jump cursor to the line middle pos
                                             ;; M-; Improved!
-                                               if at line tail then tail comment, otherwise comment current line
+                                               if at line tail then tail comment,
+                                               otherwise comment current line
                                                if select a region then comment the region
+                                               
                                             ;; Press C when scroll mouse middle button font size adjust
                                             ;; C-tab switch buffers
 
@@ -45,5 +48,5 @@ Directory structural hierarchy
                                             ;; C-c up shrink-window)
                                             ;; C-c down enlarge-window)
 
-            site-lisp------                 Load not in elpa package unofficial plugins that made by myself or others
+            site-lisp------                 Load not in elpa package unofficial custom plugins
                            |---             window-numbering multiple windows quick switch M-1/M-2/etc..
