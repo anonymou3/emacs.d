@@ -150,7 +150,7 @@
 (global-set-key (kbd "<C-wheel-up>") 'text-scale-increase)
 (global-set-key (kbd "<C-wheel-down>") 'text-scale-decrease)
 
-;; switch buffers
+;; C-tab switch buffers
 ;; http://stackoverflow.com/questions/736004/creating-a-ctrltab-keybinding-in-putty
 ;; TIP: putty send nothing when press C-tab, do not work for putty
 (global-set-key [C-tab] (quote previous-buffer))
