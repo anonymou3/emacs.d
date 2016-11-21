@@ -11,20 +11,21 @@ Directory structural hierarchy
 
     lisp------                      Elpa package init-file, named: init_module_name.el
               |---init-elpa.el      Load elpa package official plugins
-              |---init-ivy.el       C-x C-r          open recent files list
-                                    C-x C-d          open recent directories list
-                                    C-x w            clear recent files and directories list
-
+              |
+              |---init-ivy.el       ;; C-x C-r          open recent files list
+              |                     ;; C-x C-d          open recent directories list
+              |                     ;; C-x w            clear recent files and directories list
+              |
               |---init-global-key-map.el
-                                    Contains lots of quick-key setting by myself
+                                    Contains lots of quick-key bindings by myself
                                     ;; C-M-n/p       scroll multiple lines, here is 5 lines
                                     ;; C-w           delete current line in any position
                                     ;; M-w           copy current line without need to select line
                                     ;; C-x c         copy words at point into kill-ring
-                                    ;; C-x m         Mark current word
+                                    ;; C-x m         mark current word
                                     ;; F11           toggle set windows transparent effect, test in win7
                                     ;; C-z           jump cursor to the line middle pos
-                                    ;; M-;           Improved!
+                                    ;; M-;           improved!
                                                      if at line tail then tail comment,
                                                      otherwise comment current line
                                                      if select a region then comment the region
