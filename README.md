@@ -2,9 +2,11 @@ Based on https://github.com/redguardtoo/emacs.d.git
 
 Simple emacs conf
 
-Directory structural hierarchy
+Directory structural hierarchy  
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 .emacs.d
+
     init.el                         Emacs startup file
 
     custom.el                       Custom environmental variable settings
@@ -51,3 +53,11 @@ Directory structural hierarchy
     site-lisp------                 Load not in elpa package unofficial custom plugins
                    |---window-numbering
                                     ;; M-1/M-2/...  multiple windows quick switch
+
+<span style="color:red">
+;;;; !!!!ATTENTION!!!! ;;;;  
+create new file in ido mode
+
+                                    ;; C-x C-f C-f kick out ido mode into normal find file mode
+                                    ;; or
+                                    ;; C-x C-f C-j confirm immediately
