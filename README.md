@@ -54,8 +54,7 @@ Directory structural hierarchy
                    |---window-numbering
                                     ;; M-1/M-2/...  multiple windows quick switch
 
-![](http://icons.iconarchive.com/icons/hopstarter/soft-scraps/32/Button-Warning-icon.png)
-
+![](https://camo.githubusercontent.com/50e03755d1c1b7eb1f79fd9552c7e764c0331cc3/687474703a2f2f69636f6e732e69636f6e617263686976652e636f6d2f69636f6e732f686f70737461727465722f736f66742d7363726170732f33322f427574746f6e2d5761726e696e672d69636f6e2e706e67)
 [create new file in ido mode](http://stackoverflow.com/questions/5138110/emacs-create-new-file-with-ido-enabled)
 
                                     ;; C-x C-f C-f kick out ido mode into normal find file mode
