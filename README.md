@@ -54,9 +54,9 @@ Directory structural hierarchy
                    |---window-numbering
                                     ;; M-1/M-2/...  multiple windows quick switch
 
-<span style="color:red">
-;;;; !!!!ATTENTION!!!! ;;;;  
-create new file in ido mode
+![](http://icons.iconarchive.com/icons/hopstarter/soft-scraps/32/Button-Warning-icon.png)
+
+[create new file in ido mode](http://stackoverflow.com/questions/5138110/emacs-create-new-file-with-ido-enabled)
 
                                     ;; C-x C-f C-f kick out ido mode into normal find file mode
                                     ;; or
