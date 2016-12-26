@@ -1,9 +1,6 @@
+## Simple emacs conf ##
+
 Based on https://github.com/redguardtoo/emacs.d.git
-
-Simple emacs conf
-
-Directory structural hierarchy  
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 .emacs.d
 
@@ -55,8 +52,21 @@ Directory structural hierarchy
                                     ;; M-1/M-2/...  multiple windows quick switch
 
 ![](https://camo.githubusercontent.com/50e03755d1c1b7eb1f79fd9552c7e764c0331cc3/687474703a2f2f69636f6e732e69636f6e617263686976652e636f6d2f69636f6e732f686f70737461727465722f736f66742d7363726170732f33322f427574746f6e2d5761726e696e672d69636f6e2e706e67)
-[create new file in ido mode](http://stackoverflow.com/questions/5138110/emacs-create-new-file-with-ido-enabled)
+[Tips  
+create new file in ido mode](http://stackoverflow.com/questions/5138110/emacs-create-new-file-with-ido-enabled)
 
                                     ;; C-x C-f C-f kick out ido mode into normal find file mode
                                     ;; or
                                     ;; C-x C-f C-j confirm immediately
+
+Svn checkout/git clone  
+
+Windows  
+1.Double click emacsHome.reg to setup configuration path.  
+2.cd %HOME% # setup in emacsHome.reg
+
+*nix  
+1.cd ~
+
+svn co https://github.com/anonymou3/emacs.d.git/trunk .emacs.d  
+git clone https://github.com/anonymou3/emacs.d.git/ .emacs.d
