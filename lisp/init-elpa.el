@@ -101,6 +101,7 @@ ARCHIVE is the string name of the package archive.")
 (package-initialize)
 
 (require-package 'async)
+(require-package 'php-mode)
 (require-package 'better-defaults)
 (require-package 'material-theme)
 (require-package 'flx-ido)

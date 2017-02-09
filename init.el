@@ -56,6 +56,7 @@
   (require 'init-global-key-map)
 
   ;;init plugins is in package manager
+  (require 'init-php)
   (require 'init-ido)
   (require 'init-ivy)
   (require 'init-theme)
