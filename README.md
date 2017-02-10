@@ -47,6 +47,9 @@ Based on https://github.com/redguardtoo/emacs.d.git
                                     ;; C-c up        shrink-window
                                     ;; C-c down      enlarge-window
 
+                                    ;; Run most script
+                                    ;; F5            run current extension script file, such as .py .sh etc.
+
     site-lisp------                 Load not in elpa package unofficial custom plugins
                    |---window-numbering
                                     ;; M-1/M-2/...  multiple windows quick switch
