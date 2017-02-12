@@ -62,7 +62,8 @@
   (require 'init-theme)
   (require 'init-auto-complete)
   (require 'init-yasnippet)
-
+  (require 'init-git)
+  
   ;;init plugins is not in package manager
   (require 'init-window-numbering)
   (require 'init-font-set)
