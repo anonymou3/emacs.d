@@ -15,6 +15,10 @@ Based on https://github.com/redguardtoo/emacs.d.git
               |                     ;; C-x C-d          open recent directories list
               |                     ;; C-x w            clear recent files and directories list
               |
+              |---init-git.el
+              |                     ;; C-x g            magit-status
+              |                     ;; C-x M-g          magit-dispatch-popup
+              |
               |---init-global-key-map.el
                                     Contains lots of quick-key bindings by myself
                                     ;; C-M-n/p       scroll multiple lines, here is 5 lines
