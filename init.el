@@ -63,6 +63,7 @@
   (require 'init-auto-complete)
   (require 'init-yasnippet)
   (require 'init-git)
+  (require 'init-python)
   
   ;;init plugins is not in package manager
   (require 'init-window-numbering)

@@ -102,6 +102,14 @@ ARCHIVE is the string name of the package archive.")
 
 (require-package 'async)
 (require-package 'php-mode)
+
+;; for python
+;; (require-package 'ein)
+(require-package 'pyvenv)
+(require-package 'elpy)          ;; pip install flake8 && pip install jedi
+(require-package 'flycheck)
+(require-package 'py-autopep8)
+
 (require-package 'better-defaults)
 (require-package 'material-theme)
 (require-package 'flx-ido)
