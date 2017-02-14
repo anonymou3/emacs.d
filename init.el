@@ -64,7 +64,8 @@
   (require 'init-yasnippet)
   (require 'init-git)
   (require 'init-python)
-  
+  (require 'init-lua-mode)
+
   ;;init plugins is not in package manager
   (require 'init-window-numbering)
   (require 'init-font-set)

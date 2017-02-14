@@ -9,6 +9,7 @@ But you may use safer HTTPS instead.")
 ;; Feel free to add more packages!
 (defvar melpa-include-packages
   '(
+    flymake-lua
     )
   "Don't install any Melpa packages except these packages")
 
@@ -19,11 +20,15 @@ But you may use safer HTTPS instead.")
     (setq package-archives
           '(;; uncomment below line if you need use GNU ELPA
             ;; ("gnu" . "https://elpa.gnu.org/packages/")
+           ; ("melpa-cn" . "https://elpa.emacs-china.org/melpa/")
+           ; ("melpa-stable-cn" . "https://elpa.emacs-china.org/melpa-stable/")
             ("melpa" . "https://melpa.org/packages/")
             ("melpa-stable" . "https://stable.melpa.org/packages/")))
   (setq package-archives
         '(;; uncomment below line if you need use GNU ELPA
           ;; ("gnu" . "http://elpa.gnu.org/packages/")
+         ; ("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
+         ; ("melpa-stable-cn" . "http://elpa.emacs-china.org/melpa-stable/")
           ("melpa" . "http://melpa.org/packages/")
           ("melpa-stable" . "http://stable.melpa.org/packages/")))
   )
@@ -109,6 +114,10 @@ ARCHIVE is the string name of the package archive.")
 (require-package 'elpy)          ;; pip install flake8 && pip install jedi
 (require-package 'flycheck)
 (require-package 'py-autopep8)
+
+;; for lua
+(require-package 'lua-mode)
+(require-package 'flymake-lua)
 
 (require-package 'better-defaults)
 (require-package 'material-theme)
