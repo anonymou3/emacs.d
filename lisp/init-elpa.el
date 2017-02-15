@@ -126,5 +126,6 @@ ARCHIVE is the string name of the package archive.")
 (require-package 'auto-complete)
 (require-package 'yasnippet)
 (require-package 'magit)
+(require-package 'winum)
 
 (provide 'init-elpa)

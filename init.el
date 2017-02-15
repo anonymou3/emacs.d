@@ -24,8 +24,19 @@
 ;;----------------------------------------------------------------------------
 ;; !!!!!!!!!!!!!!!!!!!!!!!!!!!ATTENTTION!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ;;----------------------------------------------------------------------------
-;;set emacs startup path
 
+;; emacsclient
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Windows
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Create shortcut in the desktop
+;; %EMACSBIN%\emacsclientw.exe -na "" -c
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; *inx
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; alias e='emacsclient -t'
+
+;;set emacs startup path
 ;;M-x setenv RET HOME RET path
 ; (setenv "HOME" "D:/" t)
 
@@ -65,9 +76,9 @@
   (require 'init-git)
   (require 'init-python)
   (require 'init-lua-mode)
+  (require 'init-winum)
 
   ;;init plugins is not in package manager
-  (require 'init-window-numbering)
   (require 'init-font-set)
 
 ;;custom conf
