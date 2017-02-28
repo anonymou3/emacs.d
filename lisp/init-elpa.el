@@ -1,10 +1,16 @@
 (require 'package)
 
+;; Set it to `t' to use safer HTTPS to download packages
+(defvar melpa-use-https-repo nil
+  "By default, HTTP is used to download packages.
+But you may use safer HTTPS instead.")
+
 ;; List of VISIBLE packages from melpa-unstable (http://melpa.org)
 ;; Feel free to add more packages!
 (defvar melpa-include-packages
   '(
     flymake-lua
+    lua-mode
     )
   "Don't install any Melpa packages except these packages")
 
@@ -35,26 +41,43 @@
     (with-current-buffer (find-file-existing path)
       (kill-buffer nil))))
 
-;; Add support to package.el for pre-filtering available packages
-(defvar package-filter-function nil
+(defun package-filter-function (package version archive)
   "Optional predicate function used to internally filter packages used by package.el.
 
-The function is called with the arguments PACKAGE VERSION ARCHIVE, where
-PACKAGE is a symbol, VERSION is a vector as produced by `version-to-list', and
-ARCHIVE is the string name of the package archive.")
+  The function is called with the arguments PACKAGE VERSION ARCHIVE, where
+  PACKAGE is a symbol, VERSION is a vector as produced by `version-to-list', and
+  ARCHIVE is the string name of the package archive."
+  (let* (rlt)
+    (cond
+      ((string= archive "melpa-stable")
+       (setq rlt t)
+       ;; don's install `request v0.0.3' which drop suppport of Emacs 24.3
+       (if (string= package "request") (setq rlt nil)))
+      ((string= archive "melpa")
+       (cond
+         ;; a few exceptions from unstable melpa
+         ((or (memq package melpa-include-packages)
+              ;; install all color themes
+              (string-match (format "%s" package) "-theme"))
+          (setq rlt t))
+         (t
+           ;; I don't trust melpa which is too unstable
+           (setq rlt nil))))
+      (t
+        ;; other third party repositories I trust
+        (setq rlt t)))
+    rlt))
 
 (defadvice package--add-to-archive-contents
   (around filter-packages (package archive) activate)
-  "Add filtering of available packages using `package-filter-function', if non-nil."
-  (when (or (null package-filter-function)
-      (funcall package-filter-function
-         (car package)
-         (funcall (if (fboundp 'package-desc-version)
-          'package--ac-desc-version
-        'package-desc-vers)
-            (cdr package))
-         archive))
-    ad-do-it))
+  "Add filtering of available packages using `package-filter-function'."
+  (if (package-filter-function (car package)
+                               (funcall (if (fboundp 'package-desc-version)
+                                            'package--ac-desc-version
+                                          'package-desc-vers)
+                                        (cdr package))
+                               archive)
+      ad-do-it))
 
 ;; On-demand installation of packages
 (defun require-package (package &optional min-version no-refresh)
@@ -66,17 +89,6 @@ ARCHIVE is the string name of the package archive.")
       (progn
         (package-refresh-contents)
         (require-package package min-version t)))))
-
-;; Don't take Melpa versions of certain packages
-(setq package-filter-function
-      (lambda (package version archive)
-        (or (not (string-equal archive "melpa"))
-            (memq package melpa-include-packages)
-            ;; use all color themes
-            (string-match (format "%s" package) "-theme"))))
-
-;; un-comment below code if you prefer use all the package on melpa (unstable) without limitation
-;; (setq package-filter-function nil)
 
 ;;------------------------------------------------------------------------------
 ;; Fire up package.el and ensure the following packages are installed.
