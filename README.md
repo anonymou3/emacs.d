@@ -19,6 +19,9 @@ Based on https://github.com/redguardtoo/emacs.d.git
               |                     ;; C-x g            magit-status
               |                     ;; C-x M-g          magit-dispatch-popup
               |
+              |---init-winum.el
+              |                     ;; M-1/M-2/...      multiple windows quick switch
+              |
               |---init-global-key-map.el
                                     Contains lots of quick-key bindings by myself
                                     ;; C-M-n/p       scroll multiple lines, here is 5 lines
@@ -55,8 +58,7 @@ Based on https://github.com/redguardtoo/emacs.d.git
                                     ;; F5            run current extension script file, such as .py .sh etc.
 
     site-lisp------                 Load not in elpa package unofficial custom plugins
-                   |---window-numbering
-                                    ;; M-1/M-2/...  multiple windows quick switch
+                   |---
 
 ![](https://camo.githubusercontent.com/50e03755d1c1b7eb1f79fd9552c7e764c0331cc3/687474703a2f2f69636f6e732e69636f6e617263686976652e636f6d2f69636f6e732f686f70737461727465722f736f66742d7363726170732f33322f427574746f6e2d5761726e696e672d69636f6e2e706e67)
 [Tips  

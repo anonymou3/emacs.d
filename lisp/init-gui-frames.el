@@ -24,7 +24,7 @@
                 (set-frame-parameter nil 'menu-bar-lines 0)))))
 
 ;; change cursor type
-(setq-default cursor-type 'bar)
+;; (setq-default cursor-type 'bar)
 
 ;; full screen
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
