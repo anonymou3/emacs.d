@@ -18,7 +18,7 @@ Based on https://github.com/redguardtoo/emacs.d.git
               |---init-git.el
               |                     ;; C-x g            magit-status
               |                     ;; C-x M-g          magit-dispatch-popup
-              |
+              |                     ;; tips:            Need set git.exe path to PATH in windows.
               |---init-winum.el
               |                     ;; M-1/M-2/...      multiple windows quick switch
               |
