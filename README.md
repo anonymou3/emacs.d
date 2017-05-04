@@ -19,6 +19,13 @@ Based on https://github.com/redguardtoo/emacs.d.git
               |                     ;; C-x g            magit-status
               |                     ;; C-x M-g          magit-dispatch-popup
               |                     ;; tips:            Need set git.exe path to PATH in windows.
+              |                     ;; s to stage files
+              |                     ;; c c to commit (type the message then C-c C-c to actually commit)
+              |                     ;; b b to switch to another branch
+              |                     ;; Other handy keys:
+              |                     ;; P u to do a git push
+              |                     ;; F u to do a git pull
+              |                     ;; TAB Toggle hidden status of current section
               |---init-winum.el
               |                     ;; M-1/M-2/...      multiple windows quick switch
               |
