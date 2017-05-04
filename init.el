@@ -31,10 +31,26 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Create shortcut in the desktop
 ;; %EMACSBIN%\emacsclientw.exe -na "" -c
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; *inx
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; alias e='emacsclient -t'
+;; the first way
+(when (or *linux* *unix*)
+  (require 'server)
+  (when (and (fboundp 'server-running-p)
+             (not (server-running-p)))
+    (server-start)
+    ))
+;; then add below two lines in ~/.bash_profile
+;; emacs --daemon&
+;; alias e='emacsclient -t' # -t terminal -c gui
+
+;; the other way is use screen program
+;; screen
+;; emacs M-x server-start
+;; C-a d
+
 
 ;;set emacs startup path
 ;;M-x setenv RET HOME RET path
