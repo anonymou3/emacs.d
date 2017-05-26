@@ -77,6 +77,7 @@
 ;;set tab
 (setq-default indent-tabs-mode nil)
 (setq default-tab-width 4)
+(setq-default c-basic-offset 4)
 ;; some project prefer tab, so be it
 ;; @see http://stackoverflow.com/questions/69934/set-4-space-indent-in-emacs-in-text-mode
 (setq-default tab-width 4)
