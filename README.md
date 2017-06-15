@@ -29,6 +29,22 @@ Based on https://github.com/redguardtoo/emacs.d.git
               |---init-winum.el
               |                     ;; M-1/M-2/...      multiple windows quick switch
               |
+              |---init-gud.el       ;; PuTTY Terminal->Keyborad->The Function keys and keypad->SCO
+              |                     ;; cc xxx.cpp -g -o xxx
+              |                     ;; emacs xxx.cpp M-x gdb RET RET
+              |						;; C-f5  gud-run          run
+              |						;; S-f5  gud-kill         stop debug
+              |						;; f7                     compile
+              |						;; f8    gud-print        print variable
+              |						;; C-f8  gud-pstar        print point
+              |						;; f9    gud-break        C-x C-a C-b breakpoint add
+              |						;; C-f9  gud-remove       C-x C-a C-d breakpoint remove
+              |						;; f10   gud-next         C-x C-a C-n step over
+              |						;; C-f10 gud-until        run to the cursor position
+              |						;; S-f10 gud-jump         run from the cursor position
+              |						;; f11   gud-step         C-x C-a C-s step into
+              |						;; C-f11 gud-finish       C-x C-a C-f finish current function
+              |
               |---init-global-key-map.el
                                     Contains lots of quick-key bindings by myself
                                     ;; C-M-n/p       scroll multiple lines, here is 5 lines
@@ -36,7 +52,7 @@ Based on https://github.com/redguardtoo/emacs.d.git
                                     ;; M-w           copy current line without need to select line
                                     ;; C-x c         copy words at point into kill-ring
                                     ;; C-x m         mark current word
-                                    ;; F11           toggle set windows transparent effect, test in win7
+                                    ;; F12           toggle set windows transparent effect, test in win7
                                     ;; C-z           jump cursor to the line middle pos
                                     ;; M-;           improved!
                                                      if at line tail then tail comment,
@@ -63,6 +79,7 @@ Based on https://github.com/redguardtoo/emacs.d.git
 
                                     ;; Run most script
                                     ;; F5            run current extension script file, such as .py .sh etc.
+                                    ;;               if .c .cxx .cpp call gdb
 
     site-lisp------                 Load not in elpa package unofficial custom plugins
                    |---

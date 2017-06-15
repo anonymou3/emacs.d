@@ -77,10 +77,16 @@
   ;;init elpa package manager
   (require 'init-elpa)
 
+  ;;init putty support multiple custom key bind
+  (require 'init-putty)
+
   ;;init path
   (require 'init-exec-path)
   (require 'init-gui-frames)
   (require 'init-global-key-map)
+
+  ;;init debug
+  (require 'init-gud)
 
   ;;init plugins is in package manager
   (require 'init-php)

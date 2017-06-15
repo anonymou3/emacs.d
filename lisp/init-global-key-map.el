@@ -104,8 +104,8 @@
       (activate-mark))))
 (global-set-key (kbd "C-x m") (quote my-mark-current-word))
 
-;; F11 toggle set windows transparent effect, test work for windows7
-(global-set-key [(f11)] 'loop-alpha)
+;; F12 toggle set windows transparent effect, test work for windows7
+(global-set-key [(f12)] 'loop-alpha)
 ;; https://www.emacswiki.org/emacs/TransparentEmacs
 ;; (set-frame-parameter (selected-frame) 'alpha '(<active> . <inactive>))
 ;; (set-frame-parameter (selected-frame) 'alpha <both>)
@@ -235,6 +235,9 @@ version 2016-01-28"
 
     (cond
      ((string-equal -fSuffix "el") (load -fname) (view-echo-area-messages))
+     ((string-equal -fSuffix "c")(gdb (gud-query-cmdline 'gdb)))
+     ((string-equal -fSuffix "cxx")(gdb (gud-query-cmdline 'gdb)))
+     ((string-equal -fSuffix "cpp")(gdb (gud-query-cmdline 'gdb)))
      ((string-equal -fSuffix "java")
       (progn
         (shell-command -cmd-str "*xah-run-current-file output*" )
