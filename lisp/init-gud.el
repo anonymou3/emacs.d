@@ -1,4 +1,4 @@
-9;; ref: http://blog.csdn.net/nieyibin/article/details/7607546
+;; ref: http://blog.csdn.net/nieyibin/article/details/7607546
 
 (setq gdb-many-windows t)
 
