@@ -110,6 +110,9 @@ But you may use safer HTTPS instead.")
 (require-package 'lua-mode)
 (require-package 'flymake-lua)
 
+;; for golang
+(require-package 'company-go)
+
 (require-package 'better-defaults)
 (require-package 'material-theme)
 (require-package 'flx-ido)
