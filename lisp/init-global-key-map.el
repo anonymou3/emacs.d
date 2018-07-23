@@ -251,4 +251,17 @@ version 2016-01-28"
 
 (global-set-key (kbd "<f5>") 'xah-run-current-file)
 
+;; sync upload directory
+(defun upload ()
+  (interactive)
+  (message (file-name-directory (buffer-file-name)))
+  (shell-command (concat "bypy syncup " (file-name-directory (buffer-file-name)))))
+(global-set-key (kbd "C-x C-p") 'upload)
+
+;; upload single file
+(global-set-key (kbd "C-x C-i")
+                (lambda ()
+                  (interactive)
+                  (shell-command (concat "bypy upload " buffer-file-name))))
+
 (provide 'init-global-key-map)
