@@ -97,6 +97,9 @@ But you may use safer HTTPS instead.")
 (package-initialize)
 
 (require-package 'async)
+
+(require-package 'back-button)
+
 (require-package 'php-mode)
 
 ;; for helm-projectile

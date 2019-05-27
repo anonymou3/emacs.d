@@ -22,6 +22,10 @@ Based on https://github.com/redguardtoo/emacs.d.git
               |                     ;; C-c p e  helm-projectile-recentf            Lists recently opened files in current project
               |                     ;; C-c p s g/a/ss helm-projectile-grep/ack/ag  helm-projectile-grep  Searches for symbol starting from project root
               |
+              |---init-back-button.el
+              |                     ;; M--              go back like vs
+              |                     ;; M-S--            go forward
+              |
               |---init-ivy.el       ;; C-x C-r          open recent files list
               |                     ;; C-x C-d          open recent directories list
               |                     ;; C-x w            clear recent files and directories list

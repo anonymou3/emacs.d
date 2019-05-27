@@ -77,6 +77,8 @@
   ;;init elpa package manager
   (require 'init-elpa)
 
+  (require 'init-back-button)
+  
   ;;init helm-projectile
   (require 'init-helm-projectile)
   
