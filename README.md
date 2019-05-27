@@ -11,6 +11,16 @@ Based on https://github.com/redguardtoo/emacs.d.git
     lisp------                      Elpa package init-file, named: init_module_name.el
               |---init-elpa.el      Load elpa package official plugins
               |
+              |---init-helm-projectile.el   project interaction library
+              |                     ;; http://tuhdo.github.io/helm-projectile.html
+              |                     ;; C-c p h  helm-projectile                    Helm interface to projectile
+              |                     ;; C-c p p  helm-projectile-switch-project     Switches to another projectile project
+              |                     ;; C-c p f  helm-projectile-find-file          Lists all files in a project
+              |                     ;; C-c p g  helm-projectile-find-file-dwim     Find file based on context at point
+              |                     ;; C-c p d  helm-projectile-find-dir           Lists available directories in current project
+              |                     ;; C-c p e  helm-projectile-recentf            Lists recently opened files in current project
+              |                     ;; C-c p s g/a/ss helm-projectile-grep/ack/ag  helm-projectile-grep  Searches for symbol starting from project root
+              |
               |---init-ivy.el       ;; C-x C-r          open recent files list
               |                     ;; C-x C-d          open recent directories list
               |                     ;; C-x w            clear recent files and directories list

@@ -77,6 +77,9 @@
   ;;init elpa package manager
   (require 'init-elpa)
 
+  ;;init helm-projectile
+  (require 'init-helm-projectile)
+  
   ;;init putty support multiple custom key bind
   (require 'init-putty)
 
