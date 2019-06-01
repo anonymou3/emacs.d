@@ -19,7 +19,7 @@ But you may use safer HTTPS instead.")
 ;; (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 (setq package-archives
       '(;; uncomment below line if you need use GNU ELPA
-        ;; ("gnu" . "https://elpa.gnu.org/packages/") install some package error maybe open ok
+        ("gnu" . "https://elpa.gnu.org/packages/")
         ;; ("melpa-cn" . "https://elpa.emacs-china.org/melpa/")
         ;; ("melpa-stable-cn" . "http://elpa.emacs-china.org/melpa-stable/")
         ;; ("marmalade" . "https://marmalade-repo.org/packages/")
